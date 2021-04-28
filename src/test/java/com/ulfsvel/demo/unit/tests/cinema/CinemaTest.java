@@ -35,10 +35,10 @@ public class CinemaTest {
         movie1.setId(2L);
         Movie movie2 = new Movie();
         movie2.setAirDay(Day.FRIDAY);
-        movie1.setId(1L);
+        movie2.setId(1L);
         cinema.addMovie(movie1);
         cinema.addMovie(movie2);
-        Assertions.assertEquals(Arrays.asList(movie1, movie2), cinema.getMoviesForDay(Day.FRIDAY));
+        Assertions.assertEquals(Arrays.asList(movie2, movie1), cinema.getMoviesForDay(Day.FRIDAY));
     }
 
     @Test
