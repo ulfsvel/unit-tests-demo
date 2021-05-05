@@ -12,12 +12,34 @@ public class CartService {
     }
 
     public void addProduct(Long productId, Long userId) {
-        // @TODO: Implement
+        Product product = productRepository.getProduct(productId);
+        if (product == null) {
+            throw new ProductNotFoundException();
+        }
+        UserCart userCart = userCartRepository.getCart(userId);
+        if (userCart == null) {
+            userCart = new UserCart();
+        }
+        userCart.getProducts().add(product);
+        userCartRepository.saveCart(userCart);
     }
 
     public CartSummary getSummary(Long userId) {
-        // @TODO: Implement
-        return null;
+        UserCart userCart = userCartRepository.getCart(userId);
+        if (userCart == null) {
+            return null;
+        }
+        CartSummary cartSummary = new CartSummary();
+        cartSummary.setProducts(userCart.getProducts());
+        double productTotal = 0D;
+        int productCount = 0;
+        for (Product product : cartSummary.getProducts()) {
+            productCount += product.getQuantity();
+            productTotal += product.getPrice() * product.getQuantity();
+        }
+        cartSummary.setCartTotal(productTotal);
+        cartSummary.setProductsTotal(productCount);
+        return cartSummary;
     }
 
 }
