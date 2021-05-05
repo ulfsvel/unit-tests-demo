@@ -18,4 +18,30 @@ public class CartSummary {
      */
     private Integer productsTotal;
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public CartSummary setProducts(List<Product> products) {
+        this.products = products;
+        return this;
+    }
+
+    public Double getCartTotal() {
+        return cartTotal;
+    }
+
+    public CartSummary setCartTotal(Double cartTotal) {
+        this.cartTotal = cartTotal;
+        return this;
+    }
+
+    public Integer getProductsTotal() {
+        return productsTotal;
+    }
+
+    public CartSummary setProductsTotal(Integer productsTotal) {
+        this.productsTotal = productsTotal;
+        return this;
+    }
 }

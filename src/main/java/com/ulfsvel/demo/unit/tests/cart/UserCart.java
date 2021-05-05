@@ -1,12 +1,13 @@
 package com.ulfsvel.demo.unit.tests.cart;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class UserCart {
 
     private Long userId;
 
-    private List<Product> products;
+    private List<Product> products = new LinkedList<>();
 
     public Long getUserId() {
         return userId;

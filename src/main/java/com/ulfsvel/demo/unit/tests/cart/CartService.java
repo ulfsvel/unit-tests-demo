@@ -1,12 +1,12 @@
 package com.ulfsvel.demo.unit.tests.cart;
 
-public class Cart {
+public class CartService {
 
     private final ProductRepository productRepository;
 
     private final UserCartRepository userCartRepository;
 
-    public Cart(ProductRepository productRepository, UserCartRepository userCartRepository) {
+    public CartService(ProductRepository productRepository, UserCartRepository userCartRepository) {
         this.productRepository = productRepository;
         this.userCartRepository = userCartRepository;
     }
