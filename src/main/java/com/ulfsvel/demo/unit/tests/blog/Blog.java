@@ -9,11 +9,11 @@ public class Blog {
     }
 
     public void addArticle(Article article) {
-        // @TODO: Implement me
+        // @TODO: TASK 3 - Implement me
     }
 
     public Article getArticle(Long articleId, Locale locale) {
-        // @TODO: Implement me
+        // @TODO: TASK 3 - Implement me
         return null;
     }
 }
