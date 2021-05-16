@@ -18,7 +18,7 @@ public class BlogTest {
     }
 
     @Test
-    void givenArticlesWereAdded_whenGetArticleForNonExistingArticle_thenThrowException() {
+    void givenNoArticlesWereAdded_whenGetArticleForNonExistingArticle_thenThrowException() {
         Assertions.assertThrows(
                 ArticleNotFoundException.class,
                 () -> blog.getArticle(1L, Locale.RO)

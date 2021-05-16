@@ -17,17 +17,17 @@ public class AdderTest {
     }
 
     @Test
-    public void givenAnEmptyList_whenSumWithCounter_thenReturn0() {
+    public void givenAnEmptyList_whenSum_thenReturn0() {
         Assertions.assertEquals(0, adder.sum(Collections.emptyList()));
     }
 
     @Test
-    public void givenAnListWithOneElement_whenSumWithCounter_thenReturn1() {
+    public void givenAnListWithOneElement_whenSum_thenReturnTheElementInTheList() {
         Assertions.assertEquals(5, adder.sum(Collections.singletonList(5)));
     }
 
     @Test
-    public void givenAnListWithManyElements_whenSumWithCounter_thenReturnNumberOfElements() {
+    public void givenAnListWithManyElements_whenSum_thenReturnSumOfElements() {
         Assertions.assertEquals(16, adder.sum(Arrays.asList(3, 5, 8)));
     }
 
